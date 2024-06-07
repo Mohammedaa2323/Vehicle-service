@@ -1,0 +1,61 @@
+<div class="mt-3">
+
+<div class="card my-3" >
+    <div class="card-header">
+      <h3>{{customer.name}} :</h3>
+    </div>
+    <div class="card-body row">
+        <div class="col-3 border-end">
+           <h6 class="text-center text-decoration-underline">Customer Details :</h6>
+           <div >
+            <i class="fa-solid fa-phone" style="color: #000000;"></i> {{customer.phone}}
+            
+           </div>
+           <div>
+            <i class="fa-solid fa-envelope" style="color: #000000;"></i> {{customer.email}}
+           </div>
+        </div>
+        <div  class="col-2 border-end">
+            <h6 class="text-center text-decoration-underline">Odometer :</h6>
+
+           
+            <div>
+                <i class="fa-solid fa-gauge" style="color: #000000;"></i> : {{customer.vehicle_no}}
+            </div>
+        </div>
+        <div class="col-2 border-end">
+            <h6 class="text-center text-decoration-underline"> Date :</h6>
+
+           
+            <div>
+                <i class="fa-solid fa-calendar-days" style="color: #000000;"></i> {{customer.created_date|date}}
+            </div>
+        </div>
+        <div class="col-2 border-end">
+            <h6 class="text-center text-decoration-underline">Vehicle Number :</h6>
+            <i class="fa-solid fa-car-side" style="color: #000000;"></i> {{customer.vehicle_no}}
+            
+        </div>
+        <div class="col-1 border-end">
+            <h6 class="text-center text-decoration-underline">Total:  {{customer.work_total}}</h6>
+
+            <div>
+                <i class="fa-solid fa-money-check-dollar" style="color: #000000;"></i> 
+            </div>
+
+            
+        </div>
+        <div class="col-1">
+            <h6 class="text-center text-decoration-underline">Status :</h6>
+
+            <div class="my-3"> 
+                pending
+            </div>
+
+            
+        </div>
+  
+    </div>
+  </div>
+
+

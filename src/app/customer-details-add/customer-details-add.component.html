@@ -1,0 +1,57 @@
+<div class="mt-2">
+  <a href="" routerLink="/customers" class="btn btn-outline-success me-1 btn-sm">Home</a>
+
+</div>
+<div class="card mb-3 mx-auto mt-5" style="max-width: 90%;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../../assets/images/Auto Mechanic.jpeg" class="h-100 img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title fw-bolder text-center text-decoration-underline" *ngIf="isEdit;else addCus" >
+            Edit Customer Detaile
+          </h2>
+          <ng-template #addCus>
+            <h2 class="card-title fw-bolder text-center text-decoration-underline">
+              Add Customer Detaile
+            </h2>
+          </ng-template>
+          <form action="" [formGroup]="customerForm" (ngSubmit)="handleSubmit()">
+            <div class="mb-3">
+                <label for="">Customer Name</label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            <div class="mb-3">
+                <label for="">Customer Phone Number</label>
+                <input type="text" class="form-control" formControlName="phone">
+
+            </div>
+            <div class="mb-3">
+                <label for="">Customer Email</label>
+                <input type="email" class="form-control" formControlName="email">
+
+            </div>
+
+            <div class="mb-3">
+                <label for="">Running Kilometers</label>
+                <input type="text" class="form-control" formControlName="running_km">
+
+            </div>
+
+            <div class="mb-3">
+                <label for="">VehicleNumber</label>
+                <input type="text" class="form-control" formControlName="vehicle_no">
+
+            </div>
+            <div class="mb-3 d-grid ">
+                <button type="submit" class="btn btn-outline-primary btn-lg">{{isEdit?"Change":"Add"}}</button>
+            </div>
+            
+          </form>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
